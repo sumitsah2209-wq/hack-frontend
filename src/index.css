@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+:root {
+  --primary: #059669;
+  --primary-dark: #047857;
+  --secondary: #6366f1;
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-2xl transition-all active:scale-95 shadow-md shadow-emerald-100;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl p-4 border border-slate-100 shadow-sm transition-all;
+  }
+
+  .glass-panel {
+    @apply bg-white/90 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
